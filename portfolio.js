@@ -1,4 +1,4 @@
-const apiBase = "http://localhost:8000/admin/projects";
+const apiBase = "https://portfolio-admin-panel-1.onrender.com/admin/projects/";
 const projectsGrid = document.getElementById("projectsGrid");
 
 function normalizeUrl(url) {
