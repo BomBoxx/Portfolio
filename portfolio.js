@@ -72,11 +72,7 @@ function renderProject(project) {
 
 async function fetchProjects() {
   try {
-    const res = await fetch(apiBase, { 
-      headers: { 
-        "Authorization": "Bearer mysecretapikey123",
-        "Content-Type": "application/json"
-  } });
+    const res = await fetch(apiBase, { headers: { "x-api-key": "mysecretapikey123" } });
     const projects = await res.json();
 
     projectsGrid.innerHTML = "";
