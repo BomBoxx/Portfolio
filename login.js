@@ -6,7 +6,9 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
 
   const res = await fetch("https://portfolio-admin-panel-1.onrender.com/auth/login", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json" ,
+      "x-api-key": "mysecretapikey123"
+    },
     body: JSON.stringify({ username, password })
   });
 
