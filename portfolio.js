@@ -1,4 +1,4 @@
-const apiBase = "https://portfolio-admin-panel-1.onrender.com/admin/projects/";
+const apiBase = "https://portfolio-admin-panel-1.onrender.com/admin/projects";
 const projectsGrid = document.getElementById("projectsGrid");
 const apiKey = "mysecretapikey123";
 function normalizeUrl(url) {
