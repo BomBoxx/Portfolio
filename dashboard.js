@@ -1,6 +1,6 @@
 requireAuth();
 
-const apiBase = "http://localhost:8000/admin/projects";
+const apiBase = "https://portfolio-admin-panel-1.onrender.com/admin/projects";
 const token = getToken();
 
 const projectsGrid = document.getElementById("projectsGrid");
@@ -46,7 +46,7 @@ function renderProject(project) {
 async function fetchProjects() {
   try {
     const res = await fetch(apiBase, {
-      headers: { "Authorization": `Bearer ${token}` }
+      headers: { "Authorization": `Bearer ${token}`, "x_api_key": "mysecretapikey123" }
     });
 
     if (!res.ok) throw new Error("Failed to fetch projects");
