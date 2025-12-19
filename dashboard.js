@@ -46,7 +46,7 @@ function renderProject(project) {
 async function fetchProjects() {
   try {
     const res = await fetch(apiBase, {
-      headers: {  "x-api-key": "mysecretapikey123" }
+      headers: {  "x_api_key": "mysecretapikey123" }
     });
 
     if (!res.ok) throw new Error("Failed to fetch projects");
@@ -91,7 +91,7 @@ document.getElementById("saveBtn").addEventListener("click", async () => {
         method: "PUT",
         headers: { 
           "Content-Type": "application/json",
-          "x-api-key": "mysecretapikey123"
+          "Authorization": `Bearer ${token}`
         },
         body: JSON.stringify(data)
       });
@@ -101,7 +101,7 @@ document.getElementById("saveBtn").addEventListener("click", async () => {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
-          "x-api-key": "mysecretapikey123"
+          "Authorization": `Bearer ${token}`
         },
         body: JSON.stringify(data)
       });
