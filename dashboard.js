@@ -46,7 +46,7 @@ function renderProject(project) {
 async function fetchProjects() {
   try {
     const res = await fetch(apiBase, {
-      headers: {  "x_api_key": "mysecretapikey123" }
+      headers: {  "x-api-key": "mysecretapikey123" }
     });
 
     if (!res.ok) throw new Error("Failed to fetch projects");
