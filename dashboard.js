@@ -91,7 +91,7 @@ document.getElementById("saveBtn").addEventListener("click", async () => {
         method: "PUT",
         headers: { 
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`
+          "x-api-key": "mysecretapikey123"
         },
         body: JSON.stringify(data)
       });
@@ -101,7 +101,7 @@ document.getElementById("saveBtn").addEventListener("click", async () => {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`
+          "x-api-key": "mysecretapikey123"
         },
         body: JSON.stringify(data)
       });
